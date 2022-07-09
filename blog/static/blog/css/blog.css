@@ -1,0 +1,168 @@
+/**
+ * From https://codepen.io/bobbyshowalter/pen/MyEKdr
+ * Used via MIT license
+ * 
+ * Colors:
+ * Orange:       #f78536;
+ * Slate, light: #dfebed;
+ * Slate:        #497285;
+ * Slate, dark:  #2b4450;
+ * source: http://www.colorhunt.co/c/8184
+ * ---
+ * Font:
+ * 'Work Sans', sans-serif;
+ * source: https://www.google.com/fonts#QuickUsePlace:quickUse
+ */
+
+html {
+    background: #dfebed;
+    color: #2b4450;
+    font-family: 'Work Sans', sans-serif;
+    height: 100%;
+}
+
+a {
+    color: #f78536;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    opacity: .75;
+    text-decoration: underline;
+}
+
+a:active {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 600;
+}
+
+h4,
+h5,
+h6 {
+    font-weight: 300;
+}
+
+
+/* Objects */
+
+.o-max-width {
+    margin: 0 auto;
+    max-width: 72rem;
+    width: 95%;
+}
+
+.o-site-main {
+    margin: 1.5rem auto;
+}
+
+.o-box {
+    padding: 1.5rem;
+}
+
+
+/* Components */
+
+.c-site-header,
+.c-site-footer {
+    background: #2b4450;
+    color: #dfebed;
+}
+
+.c-site-header {
+    box-shadow: 0 2px 4px rgba(43, 68, 80, .25);
+}
+
+.c-site-footer {
+    box-shadow: 0 -2px 4px rgba(43, 68, 80, .25);
+}
+
+.c-site-nav {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.c-site-nav__wordmark {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.c-site-nav__list {
+    display: flex;
+    list-style: none;
+}
+
+.c-site-nav__item+.c-site-nav__item {
+    margin-left: .5rem;
+}
+
+.c-site-nav__link {
+    color: #dfebed;
+    padding: .25rem .5rem;
+    transition: opacity 150ms ease;
+}
+
+.c-site-nav__link:hover,
+.c-site-nav__link:focus {
+    opacity: .75;
+}
+
+.c-site-nav__link:active {
+    opacity: 1;
+}
+
+.c-card {
+    background: #fefefe;
+    box-shadow: 0 2px 4px rgba(43, 68, 80, .25);
+}
+
+.c-card>*:first-child {
+    margin-top: 0;
+}
+
+.c-card>*:last-child {
+    margin-bottom: 0;
+}
+
+.c-card+.c-card {
+    margin-top: 1.5rem;
+}
+
+.c-button {
+    box-shadow: 0 2px 4px rgba(43, 68, 80, .25);
+    display: inline-block;
+    padding: .75rem 1.5rem;
+}
+
+.c-button:hover,
+.c-button:focus {
+    opacity: .75;
+}
+
+.c-button:active {
+    opacity: 1;
+}
+
+.c-button--primary {
+    background: #f78536;
+    color: #fefefe;
+    transition: opacity 150ms ease;
+}
+
+
+/* Utilities */
+
+.u-no-margin {
+    margin: 0;
+}
+
+.u-no-padding: {
+    padding: 0;
+}
