@@ -1,0 +1,21 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+
+{% if not post_list %}
+<article class="o-box c-card c-post">
+    <h3>No posts yet, come back later!</h3>
+</article>
+
+{% endif %}
+
+{% for post in post_list %}
+    <article class="o-box c-card c-post">
+        <h2 class="c-post__title">{{ post.title }}</h2>
+        <h6 class="c-post__meta">{{ post.created_at | date:'Y-m-d'}}</h6>
+        <p>
+            {{ post.body | truncatewords_html:10}}
+        </p>
+        <p><a class="c-button c-button--primary" href="{% url 'post' post.slug %}">Read More</a></p>
+    </article>
+{% endfor %}
+{% endblock %}

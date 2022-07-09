@@ -1,0 +1,35 @@
+{% load static %}
+
+<!-- Template used with MIT license from CodePen: https://codepen.io/bobbyshowalter/pen/MyEKdr -->
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/css/blog.css' %}">
+</head>
+
+<body>
+    <header class="o-box c-site-header">
+        <nav class="o-max-width c-site-nav">
+            <a class="c-site-nav__link c-site-nav__wordmark" href="/">My Python Blog</a>
+            <ul class="u-no-margin u-no-padding c-site-nav__list">
+                <li class="c-site-nav__item"><a class="c-site-nav__link" href="{% url 'about' %}">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="o-max-width o-site-main">
+
+    <!-- Content blocks let us use base.html as a template. -->
+    {% block content %}
+    {% endblock %}
+    </main>
+
+    <footer class="o-box c-site-footer">
+        <div class="o-max-width">
+            <p>The <a href="https://practical.learnpython.dev">Practical Python Blog</a>, built with Django!</p>
+            <p><em><small>Created for Practical Python</small></em></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

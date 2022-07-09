@@ -1,0 +1,10 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<article class="o-box c-card c-post">
+    <h2 class="c-post__title">{{ post.title }}</h2>
+    <h6 class="c-post__meta">{{ post.created_at | date:'Y-m-d'}}</h6>
+    <p>
+        {{ post.body | safe}}
+    </p>
+</article>
+{% endblock %}
