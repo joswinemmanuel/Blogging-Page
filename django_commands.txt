@@ -1,0 +1,24 @@
+pip list  -  to list all packages installed using pip
+
+python3 -m pip install django  -  to install django
+
+python3 manage.py migrate  -  Next, we’ll need to create the database and database 
+tables. We’ll do this with the migrate command.
+
+python3 manage.py runserver  -  to run the server
+
+python3 manage.py shell  -  to open manage.py in iteractive mode
+
+>>> from blog.models import Post
+>>> Post.objects.all()
+<QuerySet []>
+>>> first_post = Post(title="First Post!", body="This is my first blog post.", slug="first-post")
+>>> first_post.save()
+>>> Post.objects.all()
+<QuerySet [<Post: First Post!>]>
+
+
+python manage.py createsuperuser  -  to create a superuser
+enter the same username, don't give email, give a password
+
+now go to your link. and add /admin at the end and log in with username and password
